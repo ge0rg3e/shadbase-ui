@@ -1,0 +1,249 @@
+{
+	"$schema": "https://ui.shadcn.com/schema/registry.json",
+	"name": "shadbase-ui",
+	"title": "ShadBase UI",
+	"homepage": "https://github.com/ge0rg3e/shadbase-ui",
+	"description": "ShadBase UI is an enhanced implementation of shadcn/ui components, rebuilt using Base UI.",
+	"items": [
+		{
+			"name": "alert-dialog",
+			"type": "registry:block",
+			"title": "Alert Dialog",
+			"description": "A modal dialog that interrupts the user with important content and expects a response.",
+			"files": [
+				{
+					"path": "src/registry/alert-dialog.tsx",
+					"type": "registry:component"
+				}
+			]
+		},
+		{
+			"name": "aspect-ratio",
+			"type": "registry:block",
+			"title": "Aspect Ratio",
+			"description": "Displays content within a desired ratio.",
+			"files": [
+				{
+					"path": "src/registry/aspect-ratio.tsx",
+					"type": "registry:component"
+				}
+			]
+		},
+		{
+			"name": "avatar",
+			"type": "registry:block",
+			"title": "Avatar",
+			"description": "An image element with a fallback for representing the user.",
+			"files": [
+				{
+					"path": "src/registry/avatar.tsx",
+					"type": "registry:component"
+				}
+			]
+		},
+		{
+			"name": "badge",
+			"type": "registry:block",
+			"title": "Badge",
+			"description": "Displays a badge or a component that looks like a badge.",
+			"files": [
+				{
+					"path": "src/registry/badge.tsx",
+					"type": "registry:component"
+				}
+			]
+		},
+		{
+			"name": "button",
+			"type": "registry:block",
+			"title": "Button",
+			"description": "Displays a button or a component that looks like a button.",
+			"files": [
+				{
+					"path": "src/registry/button.tsx",
+					"type": "registry:component"
+				}
+			]
+		},
+		{
+			"name": "checkbox",
+			"type": "registry:block",
+			"title": "Checkbox",
+			"description": "A control that allows the user to toggle between checked and not checked.",
+			"files": [
+				{
+					"path": "src/registry/checkbox.tsx",
+					"type": "registry:component"
+				}
+			]
+		},
+		{
+			"name": "breadcrumb",
+			"type": "registry:block",
+			"title": "Breadcrumb",
+			"description": "Displays the path to the current resource using a hierarchy of links.",
+			"files": [
+				{
+					"path": "src/registry/breadcrumb.tsx",
+					"type": "registry:component"
+				}
+			]
+		},
+		{
+			"name": "collapsible",
+			"type": "registry:block",
+			"title": "Collapsible",
+			"description": "An interactive component which expands/collapses a panel.",
+			"files": [
+				{
+					"path": "src/registry/collapsible.tsx",
+					"type": "registry:component"
+				}
+			]
+		},
+		{
+			"name": "dialog",
+			"type": "registry:block",
+			"title": "Dialog",
+			"description": "A window overlaid on either the primary window or another dialog window, rendering the content underneath inert.",
+			"files": [
+				{
+					"path": "src/registry/dialog.tsx",
+					"type": "registry:component"
+				}
+			]
+		},
+		{
+			"name": "dropdown-menu",
+			"type": "registry:block",
+			"title": "Dropdown Menu",
+			"description": "Displays a menu to the user — such as a set of actions or functions — triggered by a button.",
+			"files": [
+				{
+					"path": "src/registry/dropdown-menu.tsx",
+					"type": "registry:component"
+				}
+			]
+		},
+		{
+			"name": "label",
+			"type": "registry:block",
+			"title": "Label",
+			"description": "Renders an accessible label associated with controls.",
+			"files": [
+				{
+					"path": "src/registry/label.tsx",
+					"type": "registry:component"
+				}
+			]
+		},
+		{
+			"name": "menubar",
+			"type": "registry:block",
+			"title": "Menubar",
+			"description": "A visually persistent menu common in desktop applications that provides quick access to a consistent set of commands.",
+			"files": [
+				{
+					"path": "src/registry/menubar.tsx",
+					"type": "registry:component"
+				}
+			]
+		},
+		{
+			"name": "popover",
+			"type": "registry:block",
+			"title": "Popover",
+			"description": "Displays rich content in a portal, triggered by a button.",
+			"files": [
+				{
+					"path": "src/registry/popover.tsx",
+					"type": "registry:component"
+				}
+			]
+		},
+		{
+			"name": "progress",
+			"type": "registry:block",
+			"title": "Progress",
+			"description": "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
+			"files": [
+				{
+					"path": "src/registry/progress.tsx",
+					"type": "registry:component"
+				}
+			]
+		},
+		{
+			"name": "radio-group",
+			"type": "registry:block",
+			"title": "Radio Group",
+			"description": "A set of checkable buttons—known as radio buttons—where no more than one of the buttons can be checked at a time.",
+			"files": [
+				{
+					"path": "src/registry/radio-group.tsx",
+					"type": "registry:component"
+				}
+			]
+		},
+		{
+			"name": "scroll-area",
+			"type": "registry:block",
+			"title": "Scroll Area",
+			"description": "Augments native scroll functionality for custom, cross-browser styling.",
+			"files": [
+				{
+					"path": "src/registry/scroll-area.tsx",
+					"type": "registry:component"
+				}
+			]
+		},
+		{
+			"name": "select",
+			"type": "registry:block",
+			"title": "Select",
+			"description": "Displays a list of options for the user to pick from—triggered by a button.",
+			"files": [
+				{
+					"path": "src/registry/select.tsx",
+					"type": "registry:component"
+				}
+			]
+		},
+		{
+			"name": "separator",
+			"type": "registry:block",
+			"title": "Separator",
+			"description": "Visually or semantically separates content.",
+			"files": [
+				{
+					"path": "src/registry/separator.tsx",
+					"type": "registry:component"
+				}
+			]
+		},
+		{
+			"name": "tabs",
+			"type": "registry:block",
+			"title": "Tabs",
+			"description": "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
+			"files": [
+				{
+					"path": "src/registry/tabs.tsx",
+					"type": "registry:component"
+				}
+			]
+		},
+		{
+			"name": "tooltip",
+			"type": "registry:block",
+			"title": "Tooltip",
+			"description": "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
+			"files": [
+				{
+					"path": "src/registry/tooltip.tsx",
+					"type": "registry:component"
+				}
+			]
+		}
+	]
+}
