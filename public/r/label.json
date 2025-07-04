@@ -1,0 +1,14 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "label",
+  "type": "registry:block",
+  "title": "Label",
+  "description": "Renders an accessible label associated with controls.",
+  "files": [
+    {
+      "path": "src/registry/label.tsx",
+      "content": "'use client';\r\n\r\nimport { cn } from '@/lib/utils';\r\nimport * as React from 'react';\r\n\r\ninterface LabelProps extends React.LabelHTMLAttributes<HTMLLabelElement> {\r\n\tchildren: React.ReactNode;\r\n}\r\n\r\nconst Label = React.forwardRef<HTMLLabelElement, LabelProps>(({ className, children, ...props }, ref) => {\r\n\treturn (\r\n\t\t<label\r\n\t\t\tref={ref}\r\n\t\t\tdata-slot=\"label\"\r\n\t\t\tclassName={cn(\r\n\t\t\t\t'flex items-center gap-2 text-sm leading-none font-medium select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50',\r\n\t\t\t\tclassName\r\n\t\t\t)}\r\n\t\t\t{...props}\r\n\t\t>\r\n\t\t\t{children}\r\n\t\t</label>\r\n\t);\r\n});\r\n\r\nLabel.displayName = 'Label';\r\n\r\nexport { Label };\r\n",
+      "type": "registry:component"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "separator",
+  "type": "registry:block",
+  "title": "Separator",
+  "description": "Visually or semantically separates content.",
+  "files": [
+    {
+      "path": "src/registry/separator.tsx",
+      "content": "'use client';\r\n\r\nimport { Separator } from '@base-ui-components/react/separator';\r\nimport { cn } from '@/lib/utils';\r\nimport * as React from 'react';\r\n\r\nfunction SeparatorRoot({\r\n\tclassName,\r\n\torientation = 'horizontal',\r\n\tdecorative = true,\r\n\t...props\r\n}: React.ComponentProps<typeof Separator> & {\r\n\tdecorative?: boolean;\r\n}) {\r\n\treturn (\r\n\t\t<Separator\r\n\t\t\tdata-slot=\"separator\"\r\n\t\t\torientation={orientation}\r\n\t\t\tclassName={cn('bg-border shrink-0 data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full data-[orientation=vertical]:h-full data-[orientation=vertical]:w-px', className)}\r\n\t\t\t{...props}\r\n\t\t/>\r\n\t);\r\n}\r\n\r\nexport { SeparatorRoot as Separator };\r\n",
+      "type": "registry:component"
+    }
+  ]
+}

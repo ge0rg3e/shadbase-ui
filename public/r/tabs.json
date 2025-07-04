@@ -1,0 +1,14 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tabs",
+  "type": "registry:block",
+  "title": "Tabs",
+  "description": "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
+  "files": [
+    {
+      "path": "src/registry/tabs.tsx",
+      "content": "'use client';\r\n\r\nimport { Tabs } from '@base-ui-components/react/tabs';\r\nimport { cn } from '@/lib/utils';\r\nimport * as React from 'react';\r\n\r\nfunction TabsRoot({ className, ...props }: React.ComponentProps<typeof Tabs.Root>) {\r\n\treturn <Tabs.Root data-slot=\"tabs\" className={cn('flex flex-col gap-2', className)} {...props} />;\r\n}\r\n\r\nfunction TabsList({ className, ...props }: React.ComponentProps<typeof Tabs.List>) {\r\n\treturn <Tabs.List data-slot=\"tabs-list\" className={cn('bg-muted text-muted-foreground inline-flex h-9 w-fit items-center justify-center rounded-lg p-[3px]', className)} {...props} />;\r\n}\r\n\r\nfunction TabsTab({ className, ...props }: React.ComponentProps<typeof Tabs.Tab>) {\r\n\treturn (\r\n\t\t<Tabs.Tab\r\n\t\t\tdata-slot=\"tabs-tab\"\r\n\t\t\tclassName={cn(\r\n\t\t\t\t\"data-[state=active]:bg-background dark:data-[state=active]:text-foreground focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:outline-ring dark:data-[state=active]:border-input dark:data-[state=active]:bg-input/30 text-foreground dark:text-muted-foreground inline-flex h-[calc(100%-1px)] flex-1 items-center justify-center gap-1.5 rounded-md border border-transparent px-2 py-1 text-sm font-medium whitespace-nowrap transition-[color,box-shadow] focus-visible:ring-[3px] focus-visible:outline-1 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:shadow-sm [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4\",\r\n\t\t\t\tclassName\r\n\t\t\t)}\r\n\t\t\t{...props}\r\n\t\t/>\r\n\t);\r\n}\r\n\r\nfunction TabsPanel({ className, ...props }: React.ComponentProps<typeof Tabs.Panel>) {\r\n\treturn <Tabs.Panel data-slot=\"tabs-panel\" className={cn('flex-1 outline-none', className)} {...props} />;\r\n}\r\n\r\nfunction TabsIndicator({ className, ...props }: React.ComponentProps<typeof Tabs.Indicator>) {\r\n\treturn <Tabs.Indicator data-slot=\"tabs-indicator\" className={cn('bg-primary absolute transition-all duration-200', className)} {...props} />;\r\n}\r\n\r\nexport { TabsRoot as Tabs, TabsList, TabsTab as TabsTrigger, TabsPanel as TabsContent, TabsIndicator };\r\n",
+      "type": "registry:component"
+    }
+  ]
+}

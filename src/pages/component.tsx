@@ -34,7 +34,7 @@ const Component = () => {
 
 			<div className="space-y-3">
 				<h1 className="text-xl font-medium text-left">Installation</h1>
-				<CodeBlock language="bash" filename="bash" hideCodeLines code={`npx shadcn@latest add https://github.com/ge0rg3e/shadbase-ui/${component.name}`} />
+				<CodeBlock language="bash" filename="bash" hideCodeLines code={`npx shadcn@latest add https://shadbase-ui.ge0rg3e.rest/r/${component.name}.json`} />
 			</div>
 
 			<div className="space-y-3">

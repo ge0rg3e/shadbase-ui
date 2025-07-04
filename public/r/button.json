@@ -1,0 +1,14 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button",
+  "type": "registry:block",
+  "title": "Button",
+  "description": "Displays a button or a component that looks like a button.",
+  "files": [
+    {
+      "path": "src/registry/button.tsx",
+      "content": "import { cva, type VariantProps } from 'class-variance-authority';\r\nimport { cn } from '@/lib/utils';\r\nimport * as React from 'react';\r\n\r\nfunction Slot({ children, ...slotProps }: React.HTMLAttributes<HTMLElement> & { children?: React.ReactNode }) {\r\n\tif (React.isValidElement(children)) {\r\n\t\tconst childProps = children.props || {};\r\n\t\tconst mergedProps = { ...childProps, ...slotProps };\r\n\t\treturn React.cloneElement(children, mergedProps);\r\n\t}\r\n\r\n\treturn <span {...slotProps}>{children}</span>;\r\n}\r\n\r\nconst buttonVariants = cva(\r\n\t\"inline-flex items-center cursor-pointer justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive\",\r\n\t{\r\n\t\tvariants: {\r\n\t\t\tvariant: {\r\n\t\t\t\tdefault: 'bg-primary text-primary-foreground shadow-xs hover:bg-primary/90',\r\n\t\t\t\tdestructive: 'bg-destructive text-white shadow-xs hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/60',\r\n\t\t\t\toutline: 'border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50',\r\n\t\t\t\tsecondary: 'bg-secondary text-secondary-foreground shadow-xs hover:bg-secondary/80',\r\n\t\t\t\tghost: 'hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50',\r\n\t\t\t\tlink: 'text-primary underline-offset-4 hover:underline'\r\n\t\t\t},\r\n\t\t\tsize: {\r\n\t\t\t\tdefault: 'h-9 px-4 py-2 has-[>svg]:px-3',\r\n\t\t\t\tsm: 'h-8 rounded-md gap-1.5 px-3 has-[>svg]:px-2.5',\r\n\t\t\t\tlg: 'h-10 rounded-md px-6 has-[>svg]:px-4',\r\n\t\t\t\ticon: 'size-9'\r\n\t\t\t}\r\n\t\t},\r\n\t\tdefaultVariants: {\r\n\t\t\tvariant: 'default',\r\n\t\t\tsize: 'default'\r\n\t\t}\r\n\t}\r\n);\r\n\r\nfunction Button({\r\n\tclassName,\r\n\tvariant,\r\n\tsize,\r\n\tasChild = false,\r\n\t...props\r\n}: React.ComponentProps<'button'> &\r\n\tVariantProps<typeof buttonVariants> & {\r\n\t\tasChild?: boolean;\r\n\t}) {\r\n\tconst Comp = asChild ? Slot : 'button';\r\n\r\n\treturn <Comp data-slot=\"button\" className={cn(buttonVariants({ variant, size, className }))} {...props} />;\r\n}\r\n\r\nexport { Button, buttonVariants };\r\n",
+      "type": "registry:component"
+    }
+  ]
+}

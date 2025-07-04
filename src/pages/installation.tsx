@@ -15,24 +15,7 @@ const Installation = () => {
 
 			<div className="space-y-4">
 				<h2 className="text-xl font-semibold text-left">2. Add components</h2>
-				<CodeBlock
-					language="bash"
-					filename="bash"
-					tabs={[
-						{
-							name: 'Single',
-							language: 'bash',
-							code: `npx shadcn@latest add https://github.com/ge0rg3e/shadbase-ui/components/button`
-						},
-						{
-							name: 'Multiple',
-							language: 'bash',
-							code: `npx shadcn@latest add https://github.com/ge0rg3e/shadbase-ui/components/button
-npx shadcn@latest add https://github.com/ge0rg3e/shadbase-ui/components/card
-npx shadcn@latest add https://github.com/ge0rg3e/shadbase-ui/components/input`
-						}
-					]}
-				/>
+				<CodeBlock language="bash" filename="bash" code="npx shadcn@latest add https://shadbase-ui.ge0rg3e.rest/r/button.json" />
 			</div>
 
 			<div className="space-y-4">

@@ -1,0 +1,14 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "badge",
+  "type": "registry:block",
+  "title": "Badge",
+  "description": "Displays a badge or a component that looks like a badge.",
+  "files": [
+    {
+      "path": "src/registry/badge.tsx",
+      "content": "import { cva, type VariantProps } from 'class-variance-authority';\r\nimport { cn } from '@/lib/utils';\r\nimport * as React from 'react';\r\n\r\nfunction Slot({ children, ...slotProps }: React.HTMLAttributes<HTMLElement> & { children?: React.ReactNode }) {\r\n\tif (React.isValidElement(children)) {\r\n\t\tconst childProps = children.props || {};\r\n\t\tconst mergedProps = { ...childProps, ...slotProps };\r\n\t\treturn React.cloneElement(children, mergedProps);\r\n\t}\r\n\r\n\treturn <span {...slotProps}>{children}</span>;\r\n}\r\n\r\nconst badgeVariants = cva(\r\n\t'inline-flex items-center justify-center rounded-md border px-2 py-0.5 text-xs font-medium w-fit whitespace-nowrap shrink-0 [&>svg]:size-3 gap-1 [&>svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden',\r\n\t{\r\n\t\tvariants: {\r\n\t\t\tvariant: {\r\n\t\t\t\tdefault: 'border-transparent bg-primary text-primary-foreground [a&]:hover:bg-primary/90',\r\n\t\t\t\tsecondary: 'border-transparent bg-secondary text-secondary-foreground [a&]:hover:bg-secondary/90',\r\n\t\t\t\tdestructive:\r\n\t\t\t\t\t'border-transparent bg-destructive text-white [a&]:hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/60',\r\n\t\t\t\toutline: 'text-foreground [a&]:hover:bg-accent [a&]:hover:text-accent-foreground'\r\n\t\t\t}\r\n\t\t},\r\n\t\tdefaultVariants: {\r\n\t\t\tvariant: 'default'\r\n\t\t}\r\n\t}\r\n);\r\n\r\nfunction Badge({ className, variant, asChild = false, ...props }: React.ComponentProps<'span'> & VariantProps<typeof badgeVariants> & { asChild?: boolean }) {\r\n\tconst Comp = asChild ? Slot : 'span';\r\n\r\n\treturn <Comp data-slot=\"badge\" className={cn(badgeVariants({ variant }), className)} {...props} />;\r\n}\r\n\r\nexport { Badge, badgeVariants };\r\n",
+      "type": "registry:component"
+    }
+  ]
+}

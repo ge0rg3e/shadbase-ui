@@ -1,0 +1,14 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "aspect-ratio",
+  "type": "registry:block",
+  "title": "Aspect Ratio",
+  "description": "Displays content within a desired ratio.",
+  "files": [
+    {
+      "path": "src/registry/aspect-ratio.tsx",
+      "content": "'use client';\r\n\r\nimport { cn } from '@/lib/utils';\r\nimport * as React from 'react';\r\n\r\ninterface AspectRatioProps extends React.HTMLAttributes<HTMLDivElement> {\r\n\tratio?: number;\r\n\tchildren?: React.ReactNode;\r\n}\r\n\r\nconst AspectRatio = React.forwardRef<HTMLDivElement, AspectRatioProps>(({ className, ratio = 16 / 9, children, ...props }, ref) => {\r\n\treturn (\r\n\t\t<div ref={ref} data-slot=\"aspect-ratio\" className={cn('relative w-full', className)} style={{ aspectRatio: ratio }} {...props}>\r\n\t\t\t{children}\r\n\t\t</div>\r\n\t);\r\n});\r\n\r\nAspectRatio.displayName = 'AspectRatio';\r\n\r\nexport { AspectRatio };\r\n",
+      "type": "registry:component"
+    }
+  ]
+}

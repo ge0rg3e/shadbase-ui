@@ -1,0 +1,14 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "collapsible",
+  "type": "registry:block",
+  "title": "Collapsible",
+  "description": "An interactive component which expands/collapses a panel.",
+  "files": [
+    {
+      "path": "src/registry/collapsible.tsx",
+      "content": "'use client';\r\n\r\nimport { Collapsible } from '@base-ui-components/react/collapsible';\r\nimport * as React from 'react';\r\n\r\nfunction CollapsibleRoot({ ...props }: React.ComponentProps<typeof Collapsible.Root>) {\r\n\treturn <Collapsible.Root data-slot=\"collapsible\" {...props} />;\r\n}\r\n\r\nfunction CollapsibleTrigger({ ...props }: React.ComponentProps<typeof Collapsible.Trigger>) {\r\n\treturn <Collapsible.Trigger data-slot=\"collapsible-trigger\" {...props} />;\r\n}\r\n\r\nfunction CollapsibleContent({ ...props }: React.ComponentProps<typeof Collapsible.Panel>) {\r\n\treturn <Collapsible.Panel data-slot=\"collapsible-content\" {...props} />;\r\n}\r\n\r\nexport { CollapsibleRoot as Collapsible, CollapsibleTrigger, CollapsibleContent };\r\n",
+      "type": "registry:component"
+    }
+  ]
+}

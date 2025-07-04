@@ -1,0 +1,14 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "progress",
+  "type": "registry:block",
+  "title": "Progress",
+  "description": "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
+  "files": [
+    {
+      "path": "src/registry/progress.tsx",
+      "content": "'use client';\r\n\r\nimport { Progress } from '@base-ui-components/react/progress';\r\nimport { cn } from '@/lib/utils';\r\nimport * as React from 'react';\r\n\r\nfunction ProgressRoot({ className, value, ...props }: React.ComponentProps<typeof Progress.Root>) {\r\n\treturn (\r\n\t\t<Progress.Root data-slot=\"progress\" className={cn('relative', className)} value={value} {...props}>\r\n\t\t\t<Progress.Track className=\"bg-primary/20 relative h-2 w-full overflow-hidden rounded-full\">\r\n\t\t\t\t<Progress.Indicator data-slot=\"progress-indicator\" className=\"bg-primary h-full w-full flex-1 transition-all\" />\r\n\t\t\t</Progress.Track>\r\n\t\t</Progress.Root>\r\n\t);\r\n}\r\n\r\nfunction ProgressTrack({ className, ...props }: React.ComponentProps<typeof Progress.Track>) {\r\n\treturn <Progress.Track data-slot=\"progress-track\" className={cn('bg-primary/20 relative h-2 w-full overflow-hidden rounded-full', className)} {...props} />;\r\n}\r\n\r\nfunction ProgressIndicator({ className, ...props }: React.ComponentProps<typeof Progress.Indicator>) {\r\n\treturn <Progress.Indicator data-slot=\"progress-indicator\" className={cn('bg-primary h-full w-full flex-1 transition-all', className)} {...props} />;\r\n}\r\n\r\nfunction ProgressValue({ className, ...props }: React.ComponentProps<typeof Progress.Value>) {\r\n\treturn <Progress.Value data-slot=\"progress-value\" className={cn('text-sm font-medium', className)} {...props} />;\r\n}\r\n\r\nfunction ProgressLabel({ className, ...props }: React.ComponentProps<typeof Progress.Label>) {\r\n\treturn <Progress.Label data-slot=\"progress-label\" className={cn('text-sm font-medium', className)} {...props} />;\r\n}\r\n\r\nexport { ProgressRoot as Progress, ProgressTrack, ProgressIndicator, ProgressValue, ProgressLabel };\r\n",
+      "type": "registry:component"
+    }
+  ]
+}

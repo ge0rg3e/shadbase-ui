@@ -1,0 +1,14 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "avatar",
+  "type": "registry:block",
+  "title": "Avatar",
+  "description": "An image element with a fallback for representing the user.",
+  "files": [
+    {
+      "path": "src/registry/avatar.tsx",
+      "content": "'use client';\r\n\r\nimport { Avatar } from '@base-ui-components/react/avatar';\r\nimport { cn } from '@/lib/utils';\r\nimport * as React from 'react';\r\n\r\nfunction AvatarRoot({ className, ...props }: React.ComponentProps<typeof Avatar.Root>) {\r\n\treturn <Avatar.Root data-slot=\"avatar\" className={cn('relative flex size-8 shrink-0 overflow-hidden rounded-full', className)} {...props} />;\r\n}\r\n\r\nfunction AvatarImage({ className, ...props }: React.ComponentProps<typeof Avatar.Image>) {\r\n\treturn <Avatar.Image data-slot=\"avatar-image\" className={cn('aspect-square size-full', className)} {...props} />;\r\n}\r\n\r\nfunction AvatarFallback({ className, ...props }: React.ComponentProps<typeof Avatar.Fallback>) {\r\n\treturn <Avatar.Fallback data-slot=\"avatar-fallback\" className={cn('bg-muted flex size-full items-center justify-center rounded-full', className)} {...props} />;\r\n}\r\n\r\nexport { AvatarRoot as Avatar, AvatarImage, AvatarFallback };\r\n",
+      "type": "registry:component"
+    }
+  ]
+}
