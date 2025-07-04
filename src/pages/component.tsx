@@ -19,8 +19,8 @@ const Component = () => {
 				<p className="text-sm text-muted-foreground text-left">{component.description}</p>
 
 				<div className="flex flex-row gap-2">
-					<Button className="mt-4" size="sm" variant="ghost" asChild>
-						<Link to={component.apiReference} target="_blank">
+					<Button className="mt-4" size="sm" variant="ghost" disabled={!component.apiReference} asChild>
+						<Link to={component.apiReference ?? ''} target="_blank">
 							API Reference <Link2 />
 						</Link>
 					</Button>

@@ -666,6 +666,6 @@ export default components.map((component) => {
 		description: registryInfo.description,
 		preview: component.preview,
 		usage: component.usage,
-		apiReference: `${component.baseUiDocs}#api-reference`
+		apiReference: component.baseUiDocs !== '@custom' ? `${component.baseUiDocs}#api-reference` : null
 	};
 });
