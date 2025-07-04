@@ -20,7 +20,7 @@ const useTheme = () => {
 
 	useEffect(() => {
 		const theme = localStorage.getItem('theme');
-		if (theme) changeTheme(theme as 'light' | 'dark');
+		changeTheme((theme as 'light' | 'dark') ?? 'dark');
 	}, []);
 
 	return { theme, changeTheme };
